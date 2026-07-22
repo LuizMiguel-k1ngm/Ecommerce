@@ -11,15 +11,18 @@
     @livewireStyles
 </head>
 
-<body class="bg-gray-800">
+<body class="bg-gray-800 min-h-screen flex flex-col">
 
-    <x-shared.header />
-
-    <div>Home</div>
-
+    <x-shared.header/>
+    
+    <main class="flex-1">
+        {{ $slot ?? '' }}
+    </main>
+    
     <x-shared.footer />
-
+    
     @livewireScripts
+
 </body>
 
 </html>
